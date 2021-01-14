@@ -1,0 +1,22 @@
+﻿@model Mvc1DemoControllers.ViewModels.HomeHejViewModel
+    l
+@using System.Collections
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+
+
+Hopp:@(12+13)
+<hr />
+Hej @Model.Username
+
+Här är en lista på dina böcker
+<ul>
+    @foreach (var bok in Model.Books)
+    {
+        <li>@bok</li>
+    }
+
+</ul>

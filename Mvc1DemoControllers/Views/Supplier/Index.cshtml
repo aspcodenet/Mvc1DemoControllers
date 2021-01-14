@@ -1,0 +1,15 @@
+﻿@model Mvc1DemoControllers.ViewModels.SupplierIndexViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>Lista alla suppliers</h1>
+
+<a asp-controller="Supplier" asp-action="New">Create New Supplier</a>
+
+<ul>
+    @foreach (var supplier in Model.Suppliers)
+    {
+        <li><a asp-controller="Supplier" asp-action="Edit" asp-route-Id="@supplier.Id">@supplier.Namn</a></li>
+    }
+</ul>
